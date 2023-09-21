@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+  
+//declaring variables
+double pesos, reais, soles;
+double dollars;  
+
+//Ask user to input coin ammount for each type of coin.
+std::cout << "Enter number of Colombian Pesos: ";
+std::cin >> pesos;
+
+std::cout << "Enter number of Brazilian Reais: ";
+std::cin >> reais;
+
+std::cout << "Enter number of Peruvian Soles: ";
+std::cin >> soles;
+
+// Pesos Coversion rate 0.059
+// Reais Conversion rate 0.20
+// Soles Conversion rate 0.27
+
+dollars = 0.059 * pesos + 0.20 * reais + 0.3 * soles;
+
+//Display total amount in USD
+std::cout << "Total USD = $" << dollars  << "\n";
+}
