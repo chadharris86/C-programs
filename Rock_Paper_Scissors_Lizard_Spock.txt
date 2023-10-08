@@ -1,0 +1,105 @@
+/*
+Rock Paper Scissors Lizard Spock
+(The Big Bang Theory)
+*/
+
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+
+  // Live Long and Prosper
+srand (time(NULL));
+
+int computer = rand() % 5 + 1;
+
+int user = 0;
+
+std::cout << "=================================\n";
+std::cout << "Rock Paper Scissors Lizard Spock!\n";
+std::cout << "=================================\n";
+
+std::cout << "1) Rock.\n";
+std::cout << "2) Paper.\n";
+std::cout << "3) Scissors.\n";
+std::cout << "4) Lizard.\n";
+std::cout << "5) Spock.\n";
+std::cout << "\nPick One.\n";
+
+int rock = 1;
+int paper = 2;
+int scissors = 3;
+int lizard = 4;
+int spock = 5;
+
+
+std::cin >> user;
+
+/*
+rock > scissors
+scissors > paper
+paper > rock
+lizard > spock 
+spock > scissors
+scissors > lizard
+lizard > paper
+paper > spock 
+spock > rock
+rock > lizard
+*/
+
+std::cout << "user: " << user << "\n\n";
+std::cout << "computer: " << computer << "\n\n";
+
+if (user == rock && computer == scissors) {
+
+  std::cout << "You win!\n";
+
+} else if (user == scissors && computer == paper) {
+
+  std::cout << "You win!\n";
+
+} else if (user == paper && computer == rock) {
+
+  std::cout << "You win!\n";
+
+}  else if (user == lizard && computer == spock) {
+
+  std::cout << "You win!\n";
+
+} else if (user == spock && computer == scissors) {
+
+  std::cout << "You win!\n";
+
+} else if (user == scissors && computer == lizard) {
+
+  std::cout << "You win!\n";
+
+} else if (user == lizard && computer == paper) {
+
+  std::cout << "You win!\n";
+
+} else if (user == paper && computer == spock) {
+
+  std::cout << "You win!\n";
+
+} else if (user == spock && computer == rock) {
+
+  std::cout << "You win!\n";
+
+} else if (user == rock && computer == lizard) {
+
+  std::cout << "You win!\n";
+
+} else if (user == computer) {
+
+  std::cout << "You tie!\n";
+
+} else {
+
+  std::cout << "You loose!\n";
+
+}
+
+
+}
