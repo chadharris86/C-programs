@@ -1,0 +1,66 @@
+/*
+Rock Paper Scissors!
+
+*/
+
+#include <iostream>
+#include <stdlib.h>
+
+int main() {
+
+  // Live Long and Prosper
+srand (time(NULL));
+
+int computer = rand() % 3 + 1;
+
+int user = 0;
+
+std::cout << "====================\n";
+std::cout << "Rock Paper Scissors!\n";
+std::cout << "====================\n";
+
+std::cout << "1) Rock.\n";
+std::cout << "2) Paper.\n";
+std::cout << "3) Scissors.\n";
+
+std::cout << "\nShoot!\n";
+
+int rock = 1;
+int paper = 2;
+int scissors = 3;
+
+std::cin >> user;
+
+/*
+rock > scissors
+scissors > paper
+paper > rock
+*/
+
+std::cout << "user: " << user << "\n\n";
+std::cout << "computer: " << computer << "\n\n";
+
+if (user == rock && computer == scissors) {
+
+  std::cout << "You win!\n";
+
+} else if (user == scissors && computer == paper) {
+
+  std::cout << "You win!\n";
+
+} else if (user == paper && computer == rock) {
+
+  std::cout << "You win!\n";
+
+} else if (user == computer) {
+
+  std::cout << "You tie!\n";
+
+} else {
+
+  std::cout << "You loose!\n";
+
+}
+
+
+}
